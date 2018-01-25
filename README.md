@@ -1,3 +1,3 @@
-# SolShine Website
+# Solshine Website
 Repo files
 
