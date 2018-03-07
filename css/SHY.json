@@ -64,11 +64,11 @@
 			"id": 3,
 			"metadata": {
 				"name": "IcoMoon - Free",
-				"url": "http://icomoon.io/#icons",
+				"url": "https://icomoon.io/#icons",
 				"designer": "Keyamoon",
-				"designerURL": "http://keyamoon.com",
+				"designerURL": "https://keyamoon.com",
 				"license": "GPL",
-				"licenseURL": "http://www.gnu.org/licenses/gpl.html"
+				"licenseURL": "https://www.gnu.org/licenses/gpl.html"
 			},
 			"height": 1024,
 			"prevSize": 32,
@@ -7598,11 +7598,11 @@
 			"id": 2,
 			"metadata": {
 				"name": "Linecons",
-				"url": "http://designmodo.com/linecons-free/",
+				"url": "https://designmodo.com/linecons-free/",
 				"designer": "Sergey Shmidt",
 				"license": "CC BY-SA 3.0",
-				"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/us/",
-				"designerURL": "http://shmidt.in/"
+				"licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/us/",
+				"designerURL": "https://shmidt.in/"
 			},
 			"height": 1024,
 			"prevSize": 32,
@@ -8399,11 +8399,11 @@
 			"id": 1,
 			"metadata": {
 				"name": "Eighty Shades",
-				"url": "http://dribbble.com/shots/928458-80-Shades-of-White-Icons",
+				"url": "https://dribbble.com/shots/928458-80-Shades-of-White-Icons",
 				"designer": "Victor Erixon",
-				"designerURL": "http://victorerixon.com/",
+				"designerURL": "https://victorerixon.com/",
 				"license": "Custom",
-				"licenseURL": "http://dribbble.com/shots/928458-80-Shades-of-White-Icons"
+				"licenseURL": "https://dribbble.com/shots/928458-80-Shades-of-White-Icons"
 			},
 			"height": 1024,
 			"prevSize": 16,
@@ -9713,11 +9713,11 @@
 			"id": 0,
 			"metadata": {
 				"name": "Entypo",
-				"url": "http://www.entypo.com/",
+				"url": "https://www.entypo.com/",
 				"designer": "Daniel Bruce",
-				"designerURL": "http://danielbruce.se/",
+				"designerURL": "https://danielbruce.se/",
 				"license": "CC BY-SA 3.0",
-				"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/us/"
+				"licenseURL": "https://creativecommons.org/licenses/by-sa/3.0/us/"
 			},
 			"height": 1024,
 			"prevSize": 20,
