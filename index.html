@@ -11,15 +11,28 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'UA-114972361-1');
-	</script>
 
+		if ('serviceWorker' in navigator) {
+			// Register a service worker hosted at the root of the
+			// site using the default scope.
+		navigator.serviceWorker.register('/sw.js').then(function(registration) {
+			console.log('Service worker registration succeeded:', registration);
+		}).catch(function(error) {
+			console.log('Service worker registration failed:', error);
+		});
+		} else {
+			console.log('Service workers are not supported.');
+		}
+
+	</script>
 	<meta charset="utf-8">
+	<meta name="theme-color" content="#e80c7a" />
 	<title>Solshine Healing Arts: Hot Yoga in Patchogue Village</title>
 	<meta name="description" content="Change your life with Beginners Hot Yoga, Hot Yoga Fusion, Hot Power Yoga, Dharma Shiva Namaskar Vinyasa Yoga. Compassionate, affordable, friendly, nurturing environment located in downtown Patchogue New York.">
 	<meta http-equiv="keywords" content="located in patchogue, near bellport, near bayport, near east patchogue, yoga, warm yoga, hot yoga, bikram yoga, bikram yoga, vinyasa yoga, fusion, heated room, community, sacred spaces, warm, gentle, compassion, ashtanga, astanga, heat, health, compassion, nurturing, dharma yoga, karma yoga, peace, love, loving, hot, vegetarian, vegan, long island, new york, suffolk county">
 	<link rel="canonical" href="https://www.solshinehealingarts.com/">
+	<link rel="manifest" href="manifest.json">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta property="og:title" content="Yoga Health and Happiness in the Heart of Patchogue Village"/>
 	<meta property="og:type" content="website"/>
@@ -29,7 +42,7 @@
 	<meta property="og:description" content="Solshine is a small sacred space located in the heart of Patchogue village."/>
 	<meta name="twitter:card" value="summary">
 		
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles.css?">
 
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -211,7 +224,7 @@
 		<!-- Calendar -->
 		<div class="six columns">
 				<div class="pad-top-med">
-					<iframe src="https://calendar.google.com/calendar/embed?src=solshinehealingarts%40gmail.com&ctz=America%2FNew_York&mode=AGENDA&showPrint=0&showCalendars=0" style="border:0;border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+					<iframe title="Calendar" src="https://calendar.google.com/calendar/embed?src=solshinehealingarts%40gmail.com&ctz=America%2FNew_York&mode=AGENDA&showPrint=0&showCalendars=0" style="border:0;border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 				</div>
 			</div>
 			<!-- Calendar End -->
@@ -219,13 +232,19 @@
 	</div><!-- Main Content Container End -->
 
 
-	<footer>		
+	<footer>
 		<div class="container">
 			<div class="one-third column foot-bg">	
 				<h6>Get Social</h6>
-				 <a href="https://www.facebook.com/solshinepatchogue" target="_blank" rel="noopener"><span class="soc-icons fb"></span></a>
-				 <a href="https://twitter.com/Solshine_Yoga" target="_blank" rel="noopener"><span class="soc-icons tw"></span></a>
-				 <a href="https://www.instagram.com/solshinepatchogue" target="_blank" rel="noopener"><span class="soc-icons yp"></span></a>
+				<a href="https://www.facebook.com/solshinepatchogue" target="_blank" rel="noopener">
+					<span class="silent-desc">Facebook</span><span class="soc-icons fb"></span>
+				</a>
+				<a href="https://twitter.com/Solshine_Yoga" target="_blank" rel="noopener">
+					<span class="silent-desc">Twitter</span><span class="soc-icons tw"></span>
+				</a>
+				<a href="https://www.instagram.com/solshinepatchogue" target="_blank" rel="noopener">
+					<span class="silent-desc">Instagram</span><span class="soc-icons yp"></span>
+				</a>
 			</div>
 
 			<div class="one-third column foot-bg">
