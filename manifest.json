@@ -1,7 +1,7 @@
 {
     "short_name": "Solshine",
     "name": "Solshine Hot Yoga in Downtown Patchogue",
-    "start_url": "/index.html",
+    "start_url": "/",
     "background_color": "#e80c7a",
     "orientation": "portrait",
     "theme_color": "#e80c7a",
