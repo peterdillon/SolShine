@@ -304,8 +304,12 @@ div.row span.formw_30 {
 
 
 .event-images {
-	max-width: 40%; 
-	float:right
+	width: 40%; 
+	float:right;
+	@media only screen and (max-width: 479px) {
+		width: 90%;
+		float: initial;
+	}
 }
 
 
