@@ -39,6 +39,17 @@ $link-color: #c06606;     // Dark Orange
 	.half-size { display: none !important; }
 }
 
+.screen-reader {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+	border: 0;
+}
+
 
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -47,6 +58,10 @@ body {
 	line-height: 1.5;
 	font-size: 110%;
  }
+
+select.paypal-menu {
+	width: 96%;
+}
 
 // General Link Colors
 a { @include link-colors($link-color, $pri-color, #ff00ff, $link-color, $pri-color); }
@@ -173,7 +188,8 @@ h1.logo {
 	background-size: cover;
 	-moz-background-size: cover;  /* Firefox 3.6 */
 	background-position: center;  /* Internet Explorer 7/8 */
-	background-image: url(../images/solshine-logo.png);
+	
+	background-image: url(../images/free-spirits-logo.png?ver=0.0.1);
 	height: 250px\9;
 	@media only screen and (max-width: 767px) {
 		padding: 6%;
