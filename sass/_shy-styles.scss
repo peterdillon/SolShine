@@ -39,6 +39,17 @@ $link-color: #c06606;     // Dark Orange
 	.half-size { display: none !important; }
 }
 
+.screen-reader {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+	border: 0;
+}
+
 
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
