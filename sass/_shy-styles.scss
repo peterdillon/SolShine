@@ -19,7 +19,7 @@ $sec-color-2: #ebbb1d;    // ----
 $pri-font-color: #515151; // Dark Gray
 $sec-font-color: #454545; // Darker Gray
 $head-bg-color: #e5e5e5;  // Gray
-$link-color: #c06606;     // Dark Orange
+$link-color: darken(#c06606, 20%);     // Dark Orange
 
 @media only screen and (max-width: 767px) {
 	.full-size { display: none !important; }
