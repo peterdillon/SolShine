@@ -11,15 +11,28 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'UA-114972361-1');
+
+		if ('serviceWorker' in navigator) {
+			// Register a service worker hosted at the root of the
+			// site using the default scope.
+		navigator.serviceWorker.register('/sw.js').then(function(registration) {
+			console.log('Service worker registration succeeded:', registration);
+		}).catch(function(error) {
+			console.log('Service worker registration failed:', error);
+		});
+		} else {
+			console.log('Service workers are not supported.');
+		}
+
 	</script>
-	
 	<meta charset="utf-8">
+	<meta name="theme-color" content="#e80c7a" />
 	<title>FREE SPIRITS YOGA ~ Health and Happiness in the Heart of Patchogue Village</title>
 	<meta name="description" content="Change your life with Beginners Hot Yoga, Hot Yoga Fusion, Hot Power Yoga, Dharma Shiva Namaskar Vinyasa Yoga. Compassionate, affordable, friendly, nurturing environment located in downtown Patchogue New York.">
 	<meta http-equiv="keywords" content="located in patchogue, near bellport, near bayport, near east patchogue, yoga, warm yoga, hot yoga, bikram yoga, bikram yoga, vinyasa yoga, fusion, heated room, community, sacred spaces, warm, gentle, compassion, ashtanga, astanga, heat, health, compassion, nurturing, dharma yoga, karma yoga, peace, love, loving, hot, vegetarian, vegan, long island, new york, suffolk county">
 	<link rel="canonical" href="https://www.solshinehealingarts.com/">
+	<link rel="manifest" href="manifest.json">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta property="og:title" content="Yoga Health and Happiness in the Heart of Patchogue Village"/>
 	<meta property="og:type" content="website"/>
@@ -28,17 +41,16 @@
 	<meta property="og:site_name" content="Yoga Health and Happiness in the Heart of Patchogue Village."/>
 	<meta property="og:description" content="Solshine is a small sacred space located in the heart of Patchogue village."/>
 	<meta name="twitter:card" value="summary">
-	<link href="https://plus.google.com/u/1/110495571442383499507" rel="publisher"/>
+		
+	<link rel="stylesheet" href="css/styles.css?ver=0.0.1">
 
 	<!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="css/styles.css?ver=0.0.1">
-	<link href='https://fonts.googleapis.com/css?family=Eagle+Lake' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Nova+Round|Spectral|Zilla+Slab" rel="stylesheet">
 	
+	<link href='https://fonts.googleapis.com/css?family=Eagle+Lake' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
 		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -49,7 +61,6 @@
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-
 	<script type="application/ld+json">
 		{ 
 			"@context" : "https://schema.org",
@@ -103,6 +114,7 @@
 				]
 		}
 	</script>
+		
 </head>
 <body>
 	<!-- Primary Page Layout
@@ -112,25 +124,27 @@
 		<div class="container">
 			<div class="sixteen columns">
 				<h1 class="logo ir">Solshine Healing Arts</h1>
+				<!-- <h1 class="logo">Solshine</h1> -->
 			</div>
 		</div>
 	</header>
 
 	<nav class="nav-bg">
 		<div class="container full-size" style="display:block;">
-			<a href="https://www.solshinehealingarts.com" class="active" style="background: #c30b67; border-color: #c30b67;"><i class="icon-home"></i></a>
+			<a href="https://www.solshinehealingarts.com" class="active" style="background: #c30b67; border-color: #c30b67;"><span class="silent-desc">Solshine Homepage</span><i class="icon-home"></i></a>
 			<a href="classes.html">Class Descriptions</a>
 			<a href="teachers.html">Teachers</a>
 			<a href="heat.html">Benefits</a>
 			<a href="guidelines.html">What To Know</a>
 			<a href="rates.html">Rates</a>
-			<a href="location.html">Location</a> 			
+			<a href="location.html">Location</a>
 			<a href="workshops.html">Workshops</a>
 		</div>
 		<div class="container half-size"  style="display:none;">
 			<select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
                 <option value="">Navigation...</option>
-                <option value="https://www.solshinehealingarts.com">Home</option>
+				<option value="https://www.solshinehealingarts.com">Home</option>
+				<option value="schedule.html">Schedule</option>
 				<option value="classes.html">Class Descriptions</option>
 				<option value="teachers.html">Teachers</option>
 				<option value="heat.html">Benefits</option>
@@ -146,54 +160,36 @@
 	<div class="container">
 
 		<!-- Main Column Begin -->
-		<div class="two-thirds column">
+		<div class="sixteen columns foot-space">
+            <!-- schedule/ -->
+            <div id='container1' class='ksiframe-container' data-module='member/store' data-options='hide_branch=true' data-target='solshinestudios.karmasoftonline.com'></div>
+            <script src="https://solshinestudios.karmasoftonline.com/assets/iframeapi.js"></script>
 
-			<span class="teacher">
-				<img src="images/lara.jpg" alt="Lara">
-				<h6>Lara Schneeberg</h6>
-			</span>
+            <hr>
 
-			<span class="teacher">
-				<img src="images/carisa-tirman.jpg" alt="Carisa Tirman">
-				<h6>Carisa Tirman</h6>
-			</span>
+            <iframe src='https://solshinestudios.karmasoftonline.com/schedule?embedded=true' height='500' width='100%' scrolling="yes" frameborder='0' style='border: 5px solid pink' ></iframe>
 
-			<span class="teacher">
-				<img src="images/eugene-feis.jpg" alt="Eugene">
-				<h6>Eugene Feis</h6> 
-			</span>
+            <hr>
 
-			<span class="teacher">
-				<img src="images/raquel.jpg" alt="Raquel Vamos">
-				<h6>Raquel Vamos</h6>
-			</span>
+            <div id='container1' class='ksiframe-container' data-module='schedule' data-options='hide_branch=true' data-target='solshinestudios.karmasoftonline.com'></div>
+            <script src="http://solshinestudios.karmasoftonline.com/assets/iframeapi.js"></script>
 
-			<span class="teacher">
-				<img src="images/katie.jpg" alt="Katie Reyes">
-				<h6>Katie Reyes</h6>
-			</span>
+            <hr>
 
-			<span class="teacher">
-				<img src="images/christi.jpg" alt="Christianne Gentry">
-				<h6>Christianne Gentry</h6>
-			</span>
+            <div id='container1' class='ksiframe-container' data-module='users/profiles' data-options='hide_branch=true' data-target='solshinestudios.karmasoftonline.com'></div>
+            <script src="http://solshinestudios.karmasoftonline.com/assets/iframeapi.js"></script>
 
-		</div><!-- Main Column End -->
+            <hr>
 
-		<!-- Calendar -->
-		<div class="one-third column">
-			<div class="pad-top-med">
-				<iframe title="Calendar" src="https://calendar.google.com/calendar/embed?src=solshinehealingarts%40gmail.com&ctz=America%2FNew_York&mode=AGENDA&showPrint=0&showCalendars=0" style="border:0;border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-			</div>
+            <div id='container1' class='ksiframe-container' data-module='member/workshops' data-options='hide_branch=true' data-target='solshinestudios.karmasoftonline.com'></div>
+            <script src="http://solshinestudios.karmasoftonline.com/assets/iframeapi.js"></script>
+
 		</div>
-		<!-- Calendar End -->
-
-	</div><!-- Main Content Container End -->
+	</div>
 
 
-	<footer>		
+	<footer>
 		<div class="container">
-			
 			<div class="one-third column foot-bg">	
 				<h6>Get Social</h6>
 				<a href="https://www.facebook.com/solshinepatchogue" target="_blank" rel="noopener">
@@ -211,8 +207,7 @@
 				<h6>Location</h6>
 				<div class="vcard">
 					<img style="display:none" src="https://solshinehealingarts.com/images/lara-hcard.jpg" alt="Lara Schneeberg" class="photo"/>
-				 <div class="org bold">Free Spirits Yoga</div>
-				   <div class="org bold">at Solshine Healing Arts</div>
+				   <div class="org bold">Solshine Healing Arts</div>
 				   <div class="adr">
 					<div class="street-address">157 North Ocean Avenue</div>
 					<span class="locality">Patchogue</span>
@@ -251,7 +246,6 @@
 			<div class="one-third column foot-bg">
 				<h6>Map</h6>
 				<a href="location.html"><img src="images/map-static.jpg" alt="Click to view map"></a>
-
 			</div>
 		</div><!-- container -->
 	</footer>
@@ -259,7 +253,5 @@
 
 <!-- End Document
 ================================================== -->
-<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "https://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
-<script type="text/javascript">try{var pageTracker = _gat._getTracker("UA-15220003-1");pageTracker._trackPageview();} catch(err) {}</script>
 </body>
 </html>

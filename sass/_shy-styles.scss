@@ -48,6 +48,10 @@ body {
 	font-size: 110%;
  }
 
+select.paypal-menu {
+	width: 96%;
+}
+
 // General Link Colors
 a { @include link-colors($link-color, $pri-color, #ff00ff, $link-color, $pri-color); }
 a.links { 
@@ -173,7 +177,8 @@ h1.logo {
 	background-size: cover;
 	-moz-background-size: cover;  /* Firefox 3.6 */
 	background-position: center;  /* Internet Explorer 7/8 */
-	background-image: url(../images/solshine-logo.png);
+	
+	background-image: url(../images/solshine-logo.png?ver=0.0.1);
 	height: 250px\9;
 	@media only screen and (max-width: 767px) {
 		padding: 6%;
