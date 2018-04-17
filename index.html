@@ -12,11 +12,10 @@
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', 'UA-114972361-1');
-
 		if ('serviceWorker' in navigator) {
-			// Register a service worker hosted at the root of the
-			// site using the default scope.
-		navigator.serviceWorker.register('/sw.js').then(function(registration) {
+			navigator.serviceWorker
+			.register('/sw.js')
+			.then(function(registration) {
 			console.log('Service worker registration succeeded:', registration);
 		}).catch(function(error) {
 			console.log('Service worker registration failed:', error);
@@ -24,7 +23,6 @@
 		} else {
 			console.log('Service workers are not supported.');
 		}
-
 	</script>
 	<meta charset="utf-8">
 	<meta name="theme-color" content="#e80c7a" />
@@ -42,7 +40,7 @@
 	<meta property="og:description" content="Free Spirits Yoga is a small sacred space located in the heart of Patchogue village."/>
 	<meta name="twitter:card" value="summary">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-	<link rel="stylesheet" href="css/styles.css">
+	
 
 	
 	<!--[if lt IE 9]>
@@ -287,6 +285,7 @@
 		</div><!-- container -->
 	</footer>
 
+	<link rel="stylesheet" href="css/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Eagle+Lake' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Nova+Round|Spectral|Zilla+Slab" rel="stylesheet">
 
