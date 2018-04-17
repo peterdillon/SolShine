@@ -2,7 +2,7 @@ var CACHE_NAME = 'freespiritsyogali-cache';
 var urlsToCache = [
   '/',
   '/css/styles.css',
-  '/images/'
+  '/images/free-spirits-logo.png'
 ];
 
 self.addEventListener('install', function(event) {
