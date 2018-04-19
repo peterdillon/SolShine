@@ -1,4 +1,4 @@
-var CACHE_NAME = 'freespiritsyogali-cache-vA';
+var CACHE_NAME = 'freespiritsyogali-cache-v4';
 var urlsToCache = [
   '/',
   '/index.html',
@@ -44,6 +44,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', function(e){
   console.log('[ServiceWorker] Fetch', e.request.url);
+  if (e.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') return;
   e.respondWith(
     caches.match(e.request).then(function(response) {
       return response || fetch(e.request);
