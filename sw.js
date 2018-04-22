@@ -1,4 +1,4 @@
-var CACHE_NAME = 'freespiritsyogali-cache-v4';
+var CACHE_NAME = 'freespiritsyogali-cache-v0.0.7';
 var urlsToCache = [
   '/',
   '/index.html',

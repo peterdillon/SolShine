@@ -5,7 +5,7 @@
     ExpiresByType text/css "access plus 1 week"
     ExpiresByType text/plain "access plus 1 month"
     ExpiresByType image/gif "access plus 1 month"
-    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/png A2000
     ExpiresByType image/jpeg "access plus 1 month"
     ExpiresByType image/jpg "access plus 1 month"
     ExpiresByType application/x-javascript "access plus 1 month"
@@ -13,6 +13,9 @@
     ExpiresByType application/x-icon "access plus 1 year"
 </IfModule>
 # END EXPIRES
+
+# Cache-Control: no-cache, must-revalidate
+
 
 RewriteCond %{HTTPS} off
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
