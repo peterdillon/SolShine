@@ -1,8 +1,19 @@
-var CACHE_NAME = 'freespiritsyogali-cache';
+var CACHE_NAME = 'freespiritsyogali-cache-v0.0.7';
 var urlsToCache = [
   '/',
+  '/index.html',
+  '/classes.html',
+  '/location.html',
+  '/rates.html',
+  '/schedule.html',
+  '/teachers.html',
+  '/workshops.html',
   '/css/styles.css',
-  '/images/free-spirits-logo.png'
+  '/images/free-spirits-logo.png',
+  '/images/map-static.gif',
+  '/images/soc-icon-sprite.png',
+  '/images/head-bg.jpg',
+  '/images/bottom-bg.gif'
 ];
 
 self.addEventListener('install', function(event) {
@@ -16,6 +27,27 @@ self.addEventListener('install', function(event) {
   );
 });
 
-self.addEventListener('fetch', function(e){
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== CACHE_NAME) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+  return self.clients.claim();
+});
 
+self.addEventListener('fetch', function(e){
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  if (e.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') return;
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
 });
