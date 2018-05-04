@@ -201,14 +201,21 @@ header {
 	color: #222;
 	width: 100%;
 }
+
+// @mixin background-cache-bust($url) {
+// 	//background-image: #{'url('} + $url + #{'?v='} + unique_id() + #{')'};
+// 	background-image: unquote('"url(" + #{$url} + "?v=" + #{unique_id()} + ")"')
+// }
+
+
 h1.logo {
 	height: 100%;  /* start height */
 	margin: 0 auto;
 	background-size: cover;
 	-moz-background-size: cover;  /* Firefox 3.6 */
 	background-position: center;  /* Internet Explorer 7/8 */
-	
-	background-image: url(../images/free-spirits-logo.png);
+	// @include background-cache-bust('../images/free-spirits-logo.png');
+	 background-image: url('../images/free-spirits-logo.png?v=#{unique_id()}' );
 	height: 250px\9;
 	@media only screen and (max-width: 767px) {
 		padding: 6%;
