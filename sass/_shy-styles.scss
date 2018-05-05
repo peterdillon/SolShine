@@ -38,7 +38,8 @@ $sec-color-2: #ebbb1d;    // ----
 $pri-font-color: #515151; // Dark Gray
 $sec-font-color: #454545; // Darker Gray
 $head-bg-color: #e5e5e5;  // Gray
-$link-color: darken(#c06606, 20%);     // Dark Orange
+$link-color-dark: darken(#c06606, 25%); // Dark Orange
+$link-color: #E80C7A;
 
 @media only screen and (max-width: 767px) {
 	.full-size { display: none !important; }
@@ -228,7 +229,7 @@ footer {
 	padding-bottom: 80px;
 	width: 100%;
 	a { 
-		@include link-colors($link-color, $link-color,$link-color,$link-color,$link-color);
+		@include link-colors($link-color-dark, $link-color,$link-color,$link-color,$link-color);
 		text-decoration: none;
 	}
 	.foot-bg {
