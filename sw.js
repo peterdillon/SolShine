@@ -1,4 +1,5 @@
-var CACHE_NAME = 'freespiritsyogali-cache-v0.1.0';
+var gen = Math.random();
+var CACHE_NAME = 'freespiritsyogali-cache-v' + gen ;
 var urlsToCache = [
   '/',
   '/index.html',
@@ -11,10 +12,11 @@ var urlsToCache = [
   '/images/map-static.gif',
   '/images/soc-icon-sprite.png',
   '/images/head-bg.jpg',
-  '/images/bottom-bg.gif'
+  '/images/bottom-bg.gif',
+  '/css/styles.css',
+  '/images/free-spirits-logo.png',
 ];
-// '/css/styles.css',
-//'/images/free-spirits-logo.png',
+
 
 self.addEventListener('install', function(event) {
   // Perform install steps
