@@ -1,5 +1,4 @@
-var gen = Math.random();
-var CACHE_NAME = 'freespiritsyogali-cache-v' + gen ;
+var CACHE_NAME = 'freespiritsyogali-cache-v-327845283756';
 var urlsToCache = [
   '/',
   '/index.html',
@@ -8,6 +7,8 @@ var urlsToCache = [
   '/rates.html',
   '/schedule.html',
   '/teachers.html',
+  '/guidelines.html',
+  '/heat.html',
   '/workshops.html',
   '/images/map-static.gif',
   '/images/soc-icon-sprite.png',
